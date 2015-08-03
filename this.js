@@ -1,3 +1,6 @@
+
+//Using .call and .apply, as well as using this
+
 function multiply(c, d){
   return this.a * this.b * c * d;
 }
@@ -23,6 +26,7 @@ console.log(multiply.apply(o, [10, 20]));
 
 //////////////////////////////////////////////
 
+//using .call and .apply and this
 function addAndRoundDown (a,b,c,d){
 return Math.floor(this.a + this.b + this.c + this.d);
 }
@@ -31,5 +35,9 @@ var o = {a:1.1, b:1, c:3.5, d: 900.1}
 addAndRoundDown.apply(o);
 
 console.log(addAndRoundDown.apply(o));
+
+///////////////////////////////////////////
+
+
 
 

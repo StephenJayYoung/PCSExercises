@@ -94,7 +94,7 @@ var duck = {
 	talk: dog.talk
 }
 //duck.talk will become 'quack' because it inherits the
-//'this' from the above function, which, in the duck object
+//'this' from the above function, which, in the duck object,
 //will be quack
 duck.talk();
 
@@ -112,4 +112,34 @@ dog.talk.apply(duck,['more','stuff']);
 var nums = [9,5,8,2,4,11,8,2,7,1]
 // Math.max(2,3,4)
 Math.max.apply(null,nums);
+
+//variables live in a scope, properties live in an object. There is one
+//weird exception - the Global scope. You can always refer to global 
+//objects with the word "this"
+//
+//window: this is a global variable. Every global variable is a
+//property of window. Every global variable is a property of window
+
+
+//Using Factories
+//
+//We can write a function that can make dog and sheep and cat and arrdvark 
+//so that each animal has the same properties, but it's values and
+//properties are customized by giving it arguments. 
+//Every single animal should behave like the handcrafted dog above
+//
+
+
+
+function animal(name,sound) {
+	return {
+		name:name,
+		noise:sound,
+		talk: function{
+	console.log(this.noise);
+		}
+	}
+}
+
+var dog = animal('dog','woof');
 

@@ -103,3 +103,13 @@ duck.talk();
 //Here, what it's saying is: call dog.talk, but with duck instead
 dog.talk.call(duck);
 
+//using "apply": this is very similar to call. It will do the same 
+//thing here. But, if you have more arguments, "apply" will let
+//you out in an array with more stuff
+dog.talk.apply(duck,['more','stuff']);
+
+//use apply to find the largest number in an array
+var nums = [9,5,8,2,4,11,8,2,7,1]
+// Math.max(2,3,4)
+Math.max.apply(null,nums);
+

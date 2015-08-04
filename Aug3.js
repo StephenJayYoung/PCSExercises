@@ -77,6 +77,9 @@ talk(dog);
 //this contains lexical scoping - pertains to where the words appear/
 //where the function was called
 
+//lexical scoping looks inside the function for the code
+//dynamic scoping: looks at where the function was called from
+
 var dog = {
 noise:'woof',
 talk: function(){
@@ -85,6 +88,10 @@ talk: function(){
 }
 dog.talk()
 
+//
 
-
-
+var duck = {
+	noise:'quack',
+	talk: dog.talk
+}
+duck.talk();

@@ -88,10 +88,18 @@ talk: function(){
 }
 dog.talk()
 
-//
-
+// using a duck object
 var duck = {
 	noise:'quack',
 	talk: dog.talk
 }
+//duck.talk will become 'quack' because it inherits the
+//'this' from the above function, which, in the duck object
+//will be quack
 duck.talk();
+
+//using "call": this lets you specify a different "this". Call is
+//a method of talk itself (which is a method of dog).
+//Here, what it's saying is: call dog.talk, but with duck instead
+dog.talk.call(duck);
+

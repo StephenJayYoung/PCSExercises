@@ -74,6 +74,8 @@ function talk(who) {
 	console.log(who.noise);
 }
 talk(dog);
+//this contains lexical scoping - pertains to where the words appear/
+//where the function was called
 
 var dog = {
 noise:'woof',

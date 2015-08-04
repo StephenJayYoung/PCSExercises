@@ -130,7 +130,6 @@ Math.max.apply(null,nums);
 //
 
 
-
 function animal(name,sound) {
 	return {
 		name:name,

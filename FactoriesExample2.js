@@ -12,20 +12,28 @@ function CarSeat( options ) {
   this.isComfy = options.isComfy || true;
 }
 
+function CarAdditions(options) {
+  this.rims = options.rims || true;
+  this.bodyKit = options.bodyKit || false;
+}
+
 function CarPartFactory() {}
 CarPartFactory.prototype.createPart = function createCarPart( options ) {
   var parentClass = null;
-  
+
   if( options.partType === 'door' ) {
     parentClass = CarDoor;
-  } else if( options.partType === 'seat' ) {
+  } if(options.PartType === 'additions'){
+    parentClass = CarAdditions;
+  }
+  if ( options.partType === 'seat' ) {
     parentClass = CarSeat;
   }
-  
-  if( parentClass === null ) {
+
+  if ( parentClass === null ) {
     return false;
   }
-  
+
   return new parentClass( options );
 }
 
@@ -47,6 +55,12 @@ var door = myPartFactory.createPart( {
   isDented : false,
 } );
 
+var myPartFactory = new CarPartFactory();
+var additions = myPartFactory.createPart( {
+  rims : true,
+  bodyKit : true,
+} );
+
 // var myPartFactory1 = new CarPartFactory();
 // var door = myPartFactory.createPart( {
 //   color : 'red',
@@ -60,3 +74,4 @@ var door = myPartFactory.createPart( {
 // outputs a CarSeat object with material "leather", color "blue", isReclinable "false"
 // console.log( seat );
 console.log(door);
+console.log(additions);

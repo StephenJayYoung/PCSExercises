@@ -13,7 +13,7 @@ var citrus = fruits.slice(1, 3);
 console.log(citrus);
 
 var toppings = ["green peppers", "mushrooms", "sausage", "anchovies", "onions", "tomatoes"];
-var theOnesIWant = toppings.slice(0,1,4);
+var theOnesIWant = toppings.slice(0,1);
 var addIns = ["chocolate", "peppers"]
 var myPizza = theOnesIWant + " " + addIns;
 console.log(myPizza);

@@ -23,3 +23,11 @@ console.log(myPizza);
 // var myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
 // var newCar = myCar.slice(0, 2);
 // console.log(newCar);
+
+var alpha = ['a', 'b', 'c'],
+    numeric = [1, 2, 3];
+
+var alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric); // Result: ['a', 'b', 'c', 1, 2, 3]
+VM522:7 ["a", "b", "c", 1, 2, 3]

@@ -26,3 +26,36 @@ console.log(letsEatCake.apply(o));
 // console.log("break");
 // [this.a, this.b, this.c].forEach(logArrayElements);
 // [o].forEach(logArrayElements);
+
+/////////////////////////////////////////
+//Convert the code from the first array iteration exercise 
+//to use .forEach instead of a for-loop
+
+var x = [1,2,3,4,5];
+
+for (var i=0; i < x.length; i = i + 1){
+    if (i % 2 == 0){
+        console.log(i + " : " + x[i]);
+    }
+}
+
+function writeOutTheString(num, place){
+	    if (x % 2 == 0){
+        console.log(x + " : " + x[i]);
+    }
+};
+x.forEach(writeOutTheString);
+
+//coverted: 
+var x = [1,2,3,4,5];
+
+function writeOutTheString(num, place){
+	    if (x % 2 == 0){
+        console.log(x + " : " + x[place]);
+    }
+};
+var doIT = x.forEach(writeOutTheString);
+console.log(doIT);
+
+
+

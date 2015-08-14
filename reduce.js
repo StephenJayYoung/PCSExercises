@@ -1,6 +1,8 @@
-var fish = ["one","two"];
+function addOne(total,item) { return total +1;}
 
-function addOne(total,item) { return total+1;}
-.reduce(addOne,0);
-fish.reduce(addOne);
+// fish.reduce(addOne);
+
+var listOfWords = ["yo", "what", "words"];
+
+listOfWords.reduce(addOne);
 

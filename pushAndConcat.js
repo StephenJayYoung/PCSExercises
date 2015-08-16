@@ -5,7 +5,7 @@
 var sports = ['soccer', 'baseball'];
 var total = sports.push('football', 'swimming');
 console.log(sports);
-console.log(total);
+// console.log(total);
 
 //Concat
 //The concat() method returns a new array comprised of the array on which it is
@@ -16,14 +16,14 @@ var alpha = ['a', 'b', 'c'],
 
 var alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric);
+// console.log(alphaNumeric);
 
 var dogs = ["boxer", "lab", "pitbull"];
 var cats = ["siamese", "blah", "I'm not creative today"];
 var joinEm = dogs.concat(cats);
 var isAddingThemTheSame = dogs + cats;
-console.log(joinEm);
-console.log(isAddingThemTheSame); //adding them is not the same, as adding them together does not return an array
+// console.log(joinEm);
+// console.log(isAddingThemTheSame); //adding them is not the same, as adding them together does not return an array
 
 
 

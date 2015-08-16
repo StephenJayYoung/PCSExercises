@@ -16,3 +16,4 @@ function subtractOne(total, thing) {
 var allTheThings = ["one","two","three","four","five"];
 listOfWords.reduce(subtractOne,0);
 console.log(listOfWords.reduce(subtractOne,0));
+

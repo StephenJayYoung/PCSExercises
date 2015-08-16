@@ -4,6 +4,6 @@ function addOne(total,item) { return total + item.length;}
 
 var listOfWords = ["yo", "what", "words"];
 
-listOfWords.reduce(addOne,0);
+listOfWords.reduce(addOne,0); 
 
 

@@ -1,10 +1,11 @@
-var sanJuans = {
+
+	var people = ["Isa", "Stephen"];
+	var islands = ["Orcas", "Friday Harbor"];
+	var theActivitiesAndIslands = people.concat(islands);
+
+	var sanJuans = {
 	activities: ["fishing", "biking", "running", "eatingAllTheFood","hiking"],
-	people: ["Isa", "Stephen"],
-	islands: ["Orcas", "Friday Harbor"]
-	function doTheThings(){
+	}
 
-	};
 
-}
-
+console.log(theActivitiesAndIslands);

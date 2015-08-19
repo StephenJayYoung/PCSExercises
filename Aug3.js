@@ -15,7 +15,6 @@ function paint(obj) {
 	this.color = 'red';
 	this.amount = '1 liter';
 }
-
 //call paint as a method
 // It's a method because it's an action being called on an object
 var obj = {}
@@ -29,7 +28,8 @@ obj.paint();
 //use paint as a callback with forEach on some array of objects
 var objs = [{name:'fence'},{name:'car'},{name:'bicycle'}];
 
-objs.forEach(paint);
+var callBack = objs.forEach(paint);
+console.log(callBack);
 // console.log(objs.forEach(paint));
 
 //replace the reference to paint as a function
@@ -74,6 +74,16 @@ function talk(who) {
 	console.log(who.noise);
 }
 talk(dog);
+//////////////////////////////////
+///make a function that makes an elephant define itself
+var elephant = {
+	iAm : "I'm an elephant!",
+};
+
+function whatAmI(who) {
+	console.log(who.iAm);
+}
+talk(elephant);
 //this contains lexical scoping - pertains to where the words appear/
 //where the function was called
 
@@ -130,15 +140,15 @@ Math.max.apply(null,nums);
 //
 
 
-function animal(name,sound) {
+function animal(name,sound,talk) {
 	return {
 		name:name,
 		noise:sound,
-		talk: function{
+		talk: function(){
 	console.log(this.noise);
 		}
 	}
 }
 
-var dog = animal('dog','woof');
+var dog = animal('dog','woof',"Chyea");
 

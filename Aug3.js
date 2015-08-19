@@ -48,7 +48,23 @@ var paint = function(obj){
 	obj.color = paint.color;
 }
 
+
+
+// var Ty = {name:'Ty'}
+
+// paint(Ty)
+
+var paint = function(object){
+	object.color = paint.color;
+}
+
+var Steve = {
+	name: "Steve",
+	// school: "PCS"
+}
 paint.color = 'green';
+paint(Steve)
+
 paint(objs[0]);
 console.log('create a paint obj and give it a color:');
 
@@ -68,6 +84,8 @@ paint.useColor = function(colorName){
 }
 
 paint.useColor('turquoise');
+
+
 
 Object.keys(paint);
 paint.color
@@ -195,3 +213,24 @@ var dog = smallAnimal("dog","woof","bark");
 var guerilla = largeAnimal("5","true","ohhAhhAhh");
 console.log(dog.talk);
 console.log(guerilla.talk);
+
+////////////
+///
+///
+var cat = {
+	name: this.name = "shackleton",
+	color: this.color = "blue"
+}
+
+var house = {
+	paint: function(color) {
+		this.color = color
+	}
+}
+
+house.paint.call(cat);
+//////
+
+//find the largest number in an array
+var nums = [9,5,8,2,4,11,8,2,7,1,0,99,25,3,6,42];
+Math.min.apply(null,nums);

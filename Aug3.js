@@ -234,3 +234,46 @@ house.paint.call(cat);
 //find the largest number in an array
 var nums = [9,5,8,2,4,11,8,2,7,1,0,99,25,3,6,42];
 Math.min.apply(null,nums);
+//////////////////////////////////////////////
+function talk() {
+    console.log(this.noise);
+}
+var animals = [dog, cat, canary];
+
+var dog = {noise:"woof"};
+var cat = {noise:"meow"};
+var canary = {noise:"chirp"};
+
+animals.allTalk = function() {
+    this.forEach(function(element) {
+        talk.call(element)
+    })
+}
+
+
+// animals.allTalk = function() {
+//     this.forEach(talk);
+// }
+animals.allTalk();
+/////////////////////////////////
+function talk() {
+    console.log(this.noise);
+}
+var animals = [dog, cat, canary];
+
+var dog = {noise:"woof", talk: talk};
+var cat = {noise:"meow",talk: talk};
+var canary = {noise:"chirp",talk: talk};
+
+var animals = [dog, cat, canary];
+animals.allTalk = function() {
+    animals.forEach(talk);
+}
+animals.allTalk(); 
+/////////////////////////////////////////
+
+
+
+
+
+

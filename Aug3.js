@@ -15,6 +15,8 @@ function paint(obj) {
 	this.color = 'red';
 	this.amount = '1 liter';
 }
+
+
 //call paint as a method
 // It's a method because it's an action being called on an object
 var obj = {}
@@ -52,18 +54,26 @@ console.log('create a paint obj and give it a color:');
 
 
 //Give a function a method of its own
-
+var cat = {
+	name: "shackleton",
+	color : "blue"
+}
 
 var paint = function(obj){
 	obj.color = paint.color;
 }
 
-paint.useColor = function(color){
-	paint.color = color;
+paint.useColor = function(colorName){
+	paint.color = colorName;
 }
 
-paint.useColor('turquoise')
-paint(objs[2])
+paint.useColor('turquoise');
+
+Object.keys(paint);
+paint.color
+paint(cat);
+
+
 
 //make a function that makes the dog talk
 var dog = {
@@ -152,3 +162,36 @@ function animal(name,sound,talk) {
 
 var dog = animal('dog','woof',"Chyea");
 
+
+// Write two versions of a factory which makes animal instances which all share
+//  a single copy of their talk method.
+First implement talk as a global function.
+
+	talk: function(){
+		console.log(this.noise);
+	}
+
+function smallAnimal(name,sound,talk) {
+	return {
+		name: name,
+		noise: sound,
+		talk: function(){
+		console.log(this.noise);
+	}
+	}
+}
+
+function largeAnimal(age,playful,talk) {
+	return {
+		age: age,
+		playful: playful,
+		talk: function(){
+		console.log(this.noise);
+	}
+	}
+}
+
+var dog = smallAnimal("dog","woof","bark");
+var guerilla = largeAnimal("5","true","ohhAhhAhh");
+console.log(dog.talk);
+console.log(guerilla.talk);

@@ -62,4 +62,13 @@ var Rect = (function() {
 
 var rect1 = new Rect(0,0,1,2)
 rect1.area()
+/////////////////////////////////////////////////////////
+
+function Super() {}
+Super.prototype.a = 'a';
+
+function Sub() {}
+var adoptee = new Super();
+Sub.prototype = adoptee;
+adoptee.constructor = Sub;
 

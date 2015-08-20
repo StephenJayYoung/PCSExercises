@@ -71,4 +71,16 @@ function Sub() {}
 var adoptee = new Super();
 Sub.prototype = adoptee;
 adoptee.constructor = Sub;
+//OR
+Sub.prototype = new Super();
+Sub.prototype.constructor = Sub;
+Sub.prototype.b = "b";
+
+var sub = new Sub();
+sub.a
+sub.b
+
+sub.hasOwnProperty('b')
+'b' in sub
+sub instaceOf Super
 

@@ -29,3 +29,37 @@ var Rect = (function() {
 
     return Ctor;
 })()
+
+Rect.prototype
+
+
+//which would look like this:
+var Rect = (function() {
+    function Ctor(l,b,r,t) {
+        this.l = l;
+        this.b = b;
+        this.r = r;
+        this.t = t;
+    }
+    Ctor.prototype.width = function() {
+        return this.r - this.l;
+    }
+    Ctor.prototype.height = function() {
+        return this.t - this.b;
+    }
+    Ctor.prototype.area = function() {
+        return (this.width() * this.height());
+    }
+    Ctor.prototype.move = function(dx,dy) {
+        this.l += dx;
+        this.r += dx;
+        this.b += dy;
+        this.t += dy;
+    }
+
+    return Ctor;
+})()
+
+var rect1 = new Rect(0,0,1,2)
+rect1.area()
+

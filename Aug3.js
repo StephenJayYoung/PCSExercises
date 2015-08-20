@@ -168,18 +168,19 @@ Math.max.apply(null,nums);
 //
 
 
-function animal(name,sound,talk) {
+function makeAnimal(name,sound,talk) {
 	return {
 		name:name,
 		noise:sound,
+		color:red
 		talk: function(){
 	console.log(this.noise);
 		}
 	}
 }
 
-var dog = animal('dog','woof',"Chyea");
-
+var dog = makeAnimal('dog','woof',"bark");
+var hippo = makeAnimal("hippo","askljdhf","12345")
 
 // Write two versions of a factory which makes animal instances which all share
 //  a single copy of their talk method.
@@ -261,7 +262,7 @@ function talk() {
 }
 var animals = [dog, cat, canary];
 
-var dog = {noise:"woof", talk: talk};
+var dog = {noise:, talk: talk};
 var cat = {noise:"meow",talk: talk};
 var canary = {noise:"chirp",talk: talk};
 
@@ -271,8 +272,45 @@ animals.allTalk = function() {
 }
 animals.allTalk(); 
 /////////////////////////////////////////
+////This needs some fixing...
+function talk() {
+    console.log(this.noise);
+}
+var animals = [dog, cat, canary];
 
+var dog = {noise:"bark", talk: talk};
+var cat = {noise:"meow",talk: talk};
+var canary = {noise:"chirp",talk: talk};
 
+animals.allTalk = function(){
+	animals.forEach( function(animal)
+	{
+		animal.talk()
+	})
+}
+animals.allTalk()
+//////////////////////////////
+
+function marbleFactory(size,color) {
+	return {
+		size:size,
+		color:color,
+		isBigger: function(other){
+			if (this.size < other.size ){
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	}
+}
+
+var marble1 = marbleFactory(1,"blue");
+var marble2 = marbleFactory(3,"red");
+
+marble1.isBigger(marble2);
+///////////////////////////////////////
 
 
 

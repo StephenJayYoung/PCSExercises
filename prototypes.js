@@ -29,3 +29,5 @@ B.prototype.num = 0;
 B.prototype.str = 'default';
 var objB = new B();
 console.log(objB);
+
+////////////////////////////////////////////////////

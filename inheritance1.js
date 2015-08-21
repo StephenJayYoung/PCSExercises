@@ -68,23 +68,29 @@ var Rect = (function() {
 })()
 
 //////////////////////////////////
-var Square = (function() {
-	function Ctor(size) {
-		Rect.call(this,size,size);
-	}
-Ctor.prototype = new Rect();
-Ctor.prototype.constructor = Square;
-Ctor.prototype.size = function(num) {
-	if (arguments.length > 0) {
-		this.width = num;
-		this.height = num;
-	} else {
-		return this.width;
-	}
+///Within the Square module, add an inheritable instance method size which 
+///acts as both a getter and setter for a square's size. That is, square.size() 
+///should return the current size of square, and square.size(num) should set the 
+///size to num
+var Rect = (function() {
+	var instances = [];
+  function Ctor(w,h) {
+    this.width = w || 1;
+    this.height = h || 1;
+    // this.area = area;
 }
-return Ctor
+Ctor.every = function(){
+	return instances.slice();
+}
+Ctor.prototype.area = function() {
+	return (this.width * this.height);
+}
+    return Ctor;
 })()
-var sqr1 = new Square(4);
-sqr1
+
+var r1 = new Rect(1,1);
+		r2 = new Rect(2,2);
+		r3 = new Rect(3,3);
+var all = Rect.every();
 //////////////////////////////////////////////
 

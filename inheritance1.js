@@ -67,7 +67,7 @@ var Rect = (function() {
     return Ctor;
 })()
 
-///////////////////////
+//////////////////////////////////
 var Square = (function() {
 	function Ctor(size) {
 		Rect.call(this,size,size);
@@ -84,4 +84,7 @@ Ctor.prototype.size = function(num) {
 }
 return Ctor
 })()
+var sqr1 = new Square(4);
+sqr1
+//////////////////////////////////////////////
 

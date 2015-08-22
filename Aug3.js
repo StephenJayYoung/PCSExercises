@@ -168,18 +168,18 @@ Math.max.apply(null,nums);
 //
 
 
-function makeAnimal(name,sound,talk) {
+function makeAnimal(name,sound) {
 	return {
 		name:name,
 		noise:sound,
-		color:red
 		talk: function(){
-	console.log(this.noise);
+		console.log(this.noise);
 		}
-	}
+	};
 }
 
-var dog = makeAnimal('dog','woof',"bark");
+
+var dog = makeAnimal('dog','woof');
 var hippo = makeAnimal("hippo","askljdhf","12345")
 
 // Write two versions of a factory which makes animal instances which all share
@@ -190,7 +190,9 @@ First implement talk as a global function.
 		console.log(this.noise);
 	}
 
-function smallAnimal(name,sound,talk) {
+
+
+function smallAnimal(name,sound,noise) {
 	return {
 		name: name,
 		noise: sound,
@@ -270,7 +272,7 @@ var animals = [dog, cat, canary];
 animals.allTalk = function() {
     animals.forEach(talk);
 }
-animals.allTalk(); 
+animals.allTalk();
 /////////////////////////////////////////
 ////This needs some fixing...
 function talk() {
@@ -306,12 +308,56 @@ function marbleFactory(size,color) {
 	}
 }
 
+
+
+
+
 var marble1 = marbleFactory(1,"blue");
 var marble2 = marbleFactory(3,"red");
 
 marble1.isBigger(marble2);
+
+
+
+
+
 ///////////////////////////////////////
 
+//1. Create a car factory, that takes the paramaters: make, model and color. 
+//Return a car from that car factory
+//which is a black honda accord
+//2. Add a method to your carFactory that will allow you to give each car a unique honking sound
+//
+//3. The cars that were manufactured before 2009 have been found to be unsafe. Add a
+//method to your carFactory that will check the car's year, and return "safe" or "true"
+//if the car was manufactured after 2009, or "unsafe" or "false", if the car was manufactured 
+//before 2009
+//4. Create a method that will manufacture 100 cars
+//5.Create a method that
+// will give a car a ticket if it drives over 75mph
+//6. Create a method that 
+//7.
+//
+
+
+function carFactory(make, model, color, year, sound) {
+	return {
+		make: make,
+		model: model,
+		color: color,
+		manufactureYear: year,
+		noise: sound,
+		honk: function(){
+			console.log(this.noise);
+		}
+	}
+}
+
+
+var honda = carFactory("honda", "accord", "black", "2008", "ho");
 
 
 
+//
+//
+//

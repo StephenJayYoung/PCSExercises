@@ -93,4 +93,31 @@ var r1 = new Rect(1,1);
 		r3 = new Rect(3,3);
 var all = Rect.every();
 //////////////////////////////////////////////
+///
+///
+///
+///
+var Animal = (function() {
+
+    function Thing(walk) {
+        this.move = "walk";
+    }
+       Thing.prototype.bird = function() {
+       	this.name = this.move;
+    }
+    	Thing.prototype.fish = function() {
+    	}
+
+
+    return Thing;
+})()
+
+
+
+var animals = new animal
+Animal //this will show the Ctor object
+
+
+
+
 

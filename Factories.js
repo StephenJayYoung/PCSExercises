@@ -10,8 +10,7 @@ function createObjectFromPrototype() {
   // Return the newly created object.
   return newClass;
 }
- 
-function Person(name, sex, age) {
+ function Person(name, sex, age) {
   //enforce the use of the new keyword
   if (!(this instanceof arguments.callee)) { return createObjectFromPrototype(); }
    

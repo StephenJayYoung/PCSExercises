@@ -341,7 +341,7 @@ marble1.isBigger(marble2);
 //
 
 
-function carFactory(make, model, color, year, sound, number) {
+function carFactory(make, model, color, year, sound) {
 	return {
 		make: make,
 		model: model,
@@ -350,15 +350,26 @@ function carFactory(make, model, color, year, sound, number) {
 		noise: sound,
 		honk: function(){
 			console.log(this.noise);
+		},
+		assemble :function(a,b){
+			console.log(a * b + this.noise);
 		}
-		//this still needs some work...
-		makeAHundred: function(){
-			var allOfThem = {};
-			for(var i = 0, i< number, i++){
-				allOfThem[i].push
-				console.log allOfThem;
+		goingTooFast: function(speed) {
+			if (speed > 100) {
+				console.log("Slow down, you cray!");
+			}
+			else {
+				console.log("You are a law abiding citizen!");
 			}
 		}
+		//this still needs some work...
+		// makeAHundred: function(){
+		// 	var allOfThem = {};
+		// 	for(var i = 0, i< number, i++){
+		// 		allOfThem[i].push
+		// 		console.log allOfThem;
+		// 	}
+		// }
 
 	}
 }

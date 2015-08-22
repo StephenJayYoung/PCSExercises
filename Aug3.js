@@ -335,12 +335,13 @@ marble1.isBigger(marble2);
 //4. Create a method that will manufacture 100 cars
 //5.Create a method that
 // will give a car a ticket if it drives over 75mph
-//6. Create a method that 
-//7.
+//6. Create an array of 4 car objects. Create a method that will sort these 4 car objects by the names you've given them, 
+//in alphabetical order
+//7. 
 //
 
 
-function carFactory(make, model, color, year, sound) {
+function carFactory(make, model, color, year, sound, number) {
 	return {
 		make: make,
 		model: model,
@@ -350,6 +351,15 @@ function carFactory(make, model, color, year, sound) {
 		honk: function(){
 			console.log(this.noise);
 		}
+		//this still needs some work...
+		makeAHundred: function(){
+			var allOfThem = {};
+			for(var i = 0, i< number, i++){
+				allOfThem[i].push
+				console.log allOfThem;
+			}
+		}
+
 	}
 }
 

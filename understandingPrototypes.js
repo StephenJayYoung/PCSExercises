@@ -1,5 +1,5 @@
 function diceRoll() {
-	var randonNumber = MAth.floor(Math.random() * this.sides) + 1;
+	var randonNumber = Math.floor(Math.random() * this.sides) + 1;
 	return randonNumber;
 }
 function Dice(sides) {

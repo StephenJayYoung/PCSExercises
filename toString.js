@@ -6,5 +6,6 @@ function Dog(name, breed, color, sex) {
 }
 
 theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+theDog1 = new Dog('Mark', 'Retriever', 'golden', 'male');
 
 theDog.toString(); // returns [object Object]

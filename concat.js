@@ -12,4 +12,8 @@ function CountThemAll(n) {
 	return lines;
 	console.log(lines);
 }
-console.log(CountThemAll(5));
+var doTheThing = CountThemAll(5);
+
+var numbers = ['1','2','3','4','5'];
+
+var concatanateIt = doTheThing.concat(numbers);

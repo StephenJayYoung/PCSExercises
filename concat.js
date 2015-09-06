@@ -14,6 +14,10 @@ function CountThemAll(n) {
 }
 var doTheThing = CountThemAll(5);
 
-var numbers = ['1','2','3','4','5'];
+var numbers = ['1','2','3','4'];
 
 var concatanateIt = doTheThing.concat(numbers);
+var forEachIt = numbers.forEach(doTheThing);
+
+console.log(concatanateIt);
+console.log(forEachIt);
